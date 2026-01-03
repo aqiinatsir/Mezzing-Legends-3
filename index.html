@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezzing Legends - Server Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="server.png" alt="MLD Logo" class="logo-img">
+                <span class="logo-text">Mezzing Legends</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="about.html">Penjelasan</a></li>
+                <li><a href="p2w.html">P2W</a></li>
+                <li><a href="team.html">Tim</a></li>
+            </ul>
+
+            <!-- User Profile Section -->
+            <div class="user-section">
+                <div class="user-profile" id="userProfile">
+                    <img src="default-avatar.png" alt="User Avatar" class="user-avatar" id="userAvatar">
+                    <span class="username" id="username">Guest</span>
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item" id="profileBtn">👤 Profil Saya</a>
+                        <a href="#" class="dropdown-item logout" id="logoutBtn">🚪 Logout</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-content profile-modal">
+            <span class="close" id="closeProfileModal">&times;</span>
+            <div class="profile-header">
+                <img src="default-avatar.png" alt="User Avatar" class="profile-avatar" id="profileAvatar">
+                <h2 id="profileUsername">Username</h2>
+                <p class="profile-role" id="profileRole">Member</p>
+            </div>
+            <div class="profile-body">
+                <div class="profile-info">
+                    <div class="info-item">
+                        <label>Email:</label>
+                        <span id="profileEmail">email@example.com</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Status:</label>
+                        <span id="profileStatus" class="status-badge">Online</span>
+                    </div>
+                    <div class="info-item">
+                        <label>Bergabung:</label>
+                        <span id="profileJoinDate">01 Januari 2025</span>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="btn" id="editProfileBtn">✏️ Edit Profil</button>
+                    <button class="btn btn-secondary" id="changeAvatarBtn">📷 Ubah Avatar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal" id="editProfileModal">
+        <div class="modal-content edit-modal">
+            <span class="close" id="closeEditModal">&times;</span>
+            <h2>Edit Profil</h2>
+            <form id="editProfileForm">
+                <div class="form-group">
+                    <label>Nama Pengguna</label>
+                    <input type="text" id="editUsername" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" id="editEmail" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label>Avatar</label>
+                    <div class="avatar-input-group">
+                        <input type="text" id="editAvatar" placeholder="Masukkan URL avatar atau upload file">
+                        <button type="button" class="btn btn-secondary" id="uploadAvatarBtn" style="padding: 12px 20px; margin-top: 8px; width: 100%; text-align: center;">
+                            📁 Pilih File
+                        </button>
+                    </div>
+                    <small style="color: #888; font-size: 0.85rem; margin-top: 8px; display: block;">
+                        ✅ Dukung: JPG, PNG, GIF, WebP (Max 5MB)<br/>
+                        ✅ Atau gunakan link gambar dari internet
+                    </small>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn">Simpan Perubahan</button>
+                    <button type="button" class="btn btn-secondary" id="cancelEditBtn">Batal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>🎮 Selamat Datang di Mezzing Legends</h1>
+            <p>Server Minecraft terbaik dengan komunitas yang ramah dan fitur-fitur menarik</p>
+            <a href="login.html" class="btn btn-primary">Mulai Bermain Sekarang</a>
+        </div>
+    </section>
+
+    <!-- Features Preview -->
+    <section class="features-preview">
+        <div class="container">
+            <h2>✨ Fitur Unggulan</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">👑</div>
+                    <h3>Ranks Premium</h3>
+                    <p>Dapatkan akses eksklusif dengan berbagai privilege istimewa</p>
+                    <a href="p2w.html" class="btn-small">Lihat Selengkapnya</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Skills Powerful</h3>
+                    <p>Tingkatkan kemampuan karakter Anda dengan skill-skill spesial</p>
+                    <a href="p2w.html" class="btn-small">Lihat Selengkapnya</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎭</div>
+                    <h3>Roleplay Brutal Legends</h3>
+                    <p>Alami pengalaman roleplay yang epik dan penuh tantangan</p>
+                    <a href="about.html" class="btn-small">Lihat Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mezzing Legends Server. Semua hak dilindungi. | IP: play.mld.net | Version 1.20.1</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
