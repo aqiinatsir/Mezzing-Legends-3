@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mezzing Legends - Login & Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div class="auth-wrapper">
+            <form class="auth-form active" id="loginForm">
+                <div class="auth-header">
+                    <div class="logo-section">
+                        <div class="logo-img"></div>
+                        <span class="logo-text">MLD</span>
+                    </div>
+                    <h2 class="auth-title">Masuk</h2>
+                    <p class="auth-subtitle">Selamat datang kembali, prajurit!</p>
+                </div>
+
+                <div id="loginMessage" class="message"></div>
+
+                <div class="form-group">
+                    <label for="loginUsername">Username atau Email</label>
+                    <input type="text" id="loginUsername" placeholder="Masukkan username atau email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="loginPassword">Kata Sandi</label>
+                    <input type="password" id="loginPassword" placeholder="Masukkan kata sandi" required>
+                </div>
+
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Ingat saya</span>
+                    </label>
+                    <a href="#" class="forgot-password">Lupa kata sandi?</a>
+                </div>
+
+                <button type="submit" class="btn-auth">Masuk</button>
+
+                <div class="divider">
+                    <span>atau</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn" title="Login dengan Discord">🎮</button>
+                    <button type="button" class="social-btn" title="Login dengan Google">🔍</button>
+                    <button type="button" class="social-btn" title="Login dengan GitHub">💻</button>
+                </div>
+
+                <div class="auth-toggle">
+                    Belum punya akun? <a onclick="toggleForm()">Daftar di sini</a>
+                </div>
+            </form>
+
+            <!-- Register Form -->
+            <form class="auth-form" id="registerForm">
+                <div class="auth-header">
+                    <div class="logo-section">
+                        <div class="logo-img"></div>
+                        <span class="logo-text">MLD</span>
+                    </div>
+                    <h2 class="auth-title">Daftar</h2>
+                    <p class="auth-subtitle">Bergabunglah dengan legenda kami!</p>
+                </div>
+
+                <div id="registerMessage" class="message"></div>
+
+                <div class="form-group">
+                    <label for="registerUsername">Username</label>
+                    <input type="text" id="registerUsername" placeholder="Pilih username yang keren" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" placeholder="Masukkan email yang valid" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerPassword">Kata Sandi</label>
+                    <input type="password" id="registerPassword" placeholder="Minimal 8 karakter" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Konfirmasi Kata Sandi</label>
+                    <input type="password" id="registerConfirmPassword" placeholder="Ketik ulang kata sandi" required>
+                </div>
+
+                <button type="submit" class="btn-auth">Daftar Sekarang</button>
+
+                <div class="divider">
+                    <span>atau</span>
+                </div>
+
+                <div class="social-login">
+                    <button type="button" class="social-btn" title="Daftar dengan Discord">🎮</button>
+                    <button type="button" class="social-btn" title="Daftar dengan Google">🔍</button>
+                    <button type="button" class="social-btn" title="Daftar dengan GitHub">💻</button>
+                </div>
+
+                <div class="auth-toggle">
+                    Sudah punya akun? <a onclick="toggleForm()">Masuk di sini</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
